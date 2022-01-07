@@ -2,11 +2,7 @@
 
 #--完成日期 (1-7)- 土地計算 避免手算耗時 處理大量數據-#
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Scanner;
+
 
 public class land {
 	static float INT;
@@ -19,7 +15,7 @@ public class land {
 	   //------------土地標示部-----------------------//
 	        System.out.print("土地面積 : ");
 	        num2 = scanner.nextFloat();
-	        System.out.print("土地公告地質價元 :");
+	        System.out.prin
 	        num3 = scanner.nextFloat();
 	        System.out.println("土地面積坪數：" + num2*0.3025 +  " 總公告地質價元 : "+num2* num3 );
 	        System.out.println("1坪的價元 : "+num3/0.3025+"總平方坪數價元 : "+num3/0.3025*num2*0.3025);
@@ -121,37 +117,4 @@ public class land {
 		       out.write("債眷額比例之幾:"+num[i][3]+"\r\n");
 		       out.write("歷年取德的範圍:"+num[i][4]+"\r\n");
 	       }
-	       out.flush(); // 把快取區內容壓入檔案
-	       out.close(); // 最後記得關閉檔案
-	       System.out.print("確定OK_紀錄");
-	       //---------------------------------------------------------------//
-	}
-	public static float[][] go1 (float num11,float num2) 
-	{
-		Scanner scanner = new Scanner(System.in);
-		float[][] num = new float[(int) num11][5];
-		for(int i=0;i<num.length;i++)
-		{
-			 System.out.print("\n 第:"+(i+1)+"項擔保債眷總金額:");
-			 num[i][0] = (float) scanner.nextFloat();
-		     System.out.print("輸入權力種類 最高額抵押 為1 普通為0 : ");
-		     num[i][1] = (int) scanner.nextFloat();
-		     if( num[i][1]==1)
-		        {
-		        	  System.out.print("屬於最高 "+ num[i][0]/1.2);
-		        }
-		        if( num[i][1]==0)
-		        {
-		        	  System.out.print("屬於普通 ");
-		        }
-		        System.out.print("\n債眷額比例幾分:");
-		        num[i][2]=(float) scanner.nextFloat();
-		        System.out.print("\n債眷額比例之幾:");
-		        num[i][3]=(float) scanner.nextFloat();
-		        System.out.print("\n歷年取德的範圍:"+(num2* num[i][2]/num[i][3]*0.3025));	
-		        num[i][4]= (float) (num2* num[i][2]/num[i][3]*0.3025);
-		}
-		  System.out.print("測試用 - OK 沒問題");
-       return  num;
-	}
-}
+	       out.flush()
